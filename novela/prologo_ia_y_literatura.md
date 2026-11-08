@@ -24,7 +24,7 @@ Antigravity no ha sido un "botón milagroso" al que se le pide «escribe una nov
 Para lograr una novela de más de 120.000 palabras que mantuviera la coherencia a lo largo de 25 capítulos densos, fue necesario diseñar una metodología de trabajo modular. Inspirándonos en figuras históricas y arquetipos de excelencia, creamos y parametrizamos cinco entidades operativas (`skills`) dentro del entorno de trabajo, cada una con un mandato claro y sin concesiones:
 
 ![Consejo Editorial de SOMBRA](img/editorial_equipo.jpg)
-*El Consejo Editorial de SOMBRA en sesión de trabajo: Pedro Garat (Dirección Creativa y Coordinación Editorial, al centro) coordinando la obra junto a los agentes literarios Miguel (Prosa y Estilo / Cervantes), Carl (Rigor Científico / Sagan), Alfred (Tensión y Suspense / Hitchcock), Bill (Infraestructura / Gates) y Capitán Memo (Cronista y Bitácora).*
+*El Consejo Editorial de SOMBRA en sesión: de izquierda a derecha, Capitán Memo (Coherencia), Bill (Despliegue), Alfred (Trama/suspense), Pedro Garat (Director), Miguel (Estilo literario) y Carl (asesor científico)*
 
 ```
                           ┌────────────────────────┐
@@ -50,20 +50,20 @@ Para lograr una novela de más de 120.000 palabras que mantuviera la coherencia 
                            └─────────────────────┘
 ```
 
-1. **MIGUEL (Maestro de Prosa y Textura Literaria — Inspirado en Miguel de Cervantes):**  
+1. **MIGUEL (Estilo Literario y Textura Sensorial):**  
    Encargado de la redacción estilística, el ritmo de las oraciones y la riqueza del vocabulario castellano. Su instrucción primordial fue desterrar los automatismos y frases cliché de los modelos de lenguaje genéricos, aplicar con rigor la máxima de *"show, don't tell"* (mostrar en lugar de explicar), tallar voces diferenciadas para cada personaje y aportar textura física a los escenarios: el frío metálico de la base de Nellis, el choque magnético de corrientes o el desgarro íntimo de los diálogos familiares.
 
-2. **CARL (Asesor Científico y Astrofísico — Inspirado en Carl Sagan):**  
+2. **CARL (Asesor Científico y Rigor Astrofísico):**  
    El guardián de la verosimilitud *Hard Sci-Fi*. Carl auditó implacablemente cada concepto de física teórica y aplicada: la dinámica orbital en el punto de Lagrange L1, las matemáticas del confinamiento magnético en reactores MHD, el fenómeno de *quench* superconductor, la fotodegradación del ozono por protones solares, y la imposibilidad de que las ondas electromagnéticas traspasaran la malla de Sombra. Carl tradujo ecuaciones en prosa visual sin abaratar la ciencia ni insultar la inteligencia del lector.
 
-3. **ALFRED (Arquitecto de Trama y Suspense — Inspirado en Alfred Hitchcock):**  
+3. **ALFRED (Arquitecto de Trama y Suspense):**  
    El encargado de vigilar la curva dramática y la economía del misterio. Alfred calibró qué sabía el lector frente a lo que ignoraban los personajes en cada acto, controló los ganchos de final de capítulo, supervisó la siembra y disparo de las *armas de Chéjov* (como el magnetófono analógico Nagra III o la cinta magnética de cabina) y diseñó los giros que desarticulan las falsas esperanzas de los protagonistas.
 
-4. **BILL (Ingeniero de Infraestructura y Despliegue — Inspirado en Bill Gates):**  
-   El ejecutor técnico. Bill se encargó de programar los módulos de compilación en Python y Node.js, compilar las tres ediciones simultáneas, asegurar la integridad tipográfica de los 75 volúmenes en PDF formateados con la fuente clásica Baskerville bajo estándares de imprenta, y desplegar en tiempo real cada avance hacia el repositorio oficial y la plataforma web de GitHub Pages.
+4. **BILL (Ingeniero de Infraestructura y Despliegue Digital):**  
+   El ejecutor técnico. Bill se encargó de programar la arquitectura de compilación de las tres ediciones simultáneas, asegurar la elegancia y pulcritud de los volúmenes formateados con la fuente clásica Baskerville bajo estándares de imprenta, y desplegar en tiempo real cada avance hacia el repositorio oficial y la plataforma web interactiva.
 
-5. **CAPITÁN MEMO (Cronista y Oficial de Bitácora):**  
-   El custodio de la memoria continua. Para evitar que el sistema sufriera amnesias entre sesión y sesión de trabajo, el Capitán Memo transcribió y estructuró sistemáticamente en `historial/historial.md` cada directriz, debate técnico, corrección del Autor y estado de la trama, asegurando que el equipo retomara el hilo con precisión quirúrgica sin importar el día o la máquina de trabajo.
+5. **CAPITÁN MEMO (Coherencia Editorial y Memoria Continua):**  
+   El custodio de la continuidad del proyecto. Para evitar incoherencias entre sesión y sesión de trabajo, el Capitán Memo registró y estructuró sistemáticamente cada directriz, debate técnico, corrección del Autor y estado de la trama, asegurando que el equipo retomara el hilo con precisión quirúrgica sin importar el día o la máquina de trabajo.
 
 ---
 
