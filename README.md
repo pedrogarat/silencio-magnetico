@@ -1,9 +1,9 @@
-# La Canción del Silencio
+# SOMBRA
 
 **Novela de ciencia ficción dura y suspense cósmico.**  
 *Autor / Dirección Creativa:* Pedro Garat + Antigravity.
 
-> 🌐 **Lector Web Interactivo:** [https://pedrogarat.github.io/la-cancion-del-silencio/](https://pedrogarat.github.io/la-cancion-del-silencio/)
+> 🌐 **Lector Web Interactivo:** [https://pedrogarat.github.io/sombra/](https://pedrogarat.github.io/sombra/)
 
 ---
 

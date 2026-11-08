@@ -14,7 +14,7 @@ import sys
 
 WORKSPACE_DIR = os.path.abspath(os.path.dirname(__file__))
 TEMP_SYNC_DIR = os.path.join(tempfile.gettempdir(), "novela_gh_sync")
-REPO_URL = "https://github.com/pedrogarat/silencio-magnetico.git"
+REPO_URL = "https://github.com/pedrogarat/sombra.git"
 
 # Carpetas o patrones a excluir del copiado
 EXCLUDE_DIRS = {".git", "__pycache__"}
@@ -89,7 +89,7 @@ def main():
     print("\nAñadiendo archivos al índice de Git...")
     run_cmd("git add -A", cwd=TEMP_SYNC_DIR)
 
-    commit_msg = "feat(editorial): afinar pie de foto exacto y descripciones de funciones del consejo editorial"
+    commit_msg = "docs: actualizar enlace web a https://pedrogarat.github.io/sombra/"
     print(f"\nCreando commit: '{commit_msg}'...")
     try:
         run_cmd(f'git commit -m "{commit_msg}"', cwd=TEMP_SYNC_DIR)
