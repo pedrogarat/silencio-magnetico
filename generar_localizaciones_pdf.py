@@ -38,7 +38,7 @@ class LocationsCanvas(canvas.Canvas):
         
         # Encabezado (páginas > 1)
         if self._pageNumber > 1:
-            self.drawString(54, PAGE_HEIGHT - 36, "LA CANCIÓN DEL SILENCIO • ATLAS Y CÓDEX DE LOCALIZACIONES")
+            self.drawString(54, PAGE_HEIGHT - 36, "SOMBRA • ATLAS Y CÓDEX DE LOCALIZACIONES")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - 54, PAGE_HEIGHT - 36, "ESCENARIOS, TEATROS DE OPERACIONES Y BASTIONES")
@@ -290,7 +290,7 @@ def generate_pdf():
     
     # Portada / Cabecera
     story.append(Paragraph("ATLAS DE LOCALIZACIONES", title_style))
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO • LA GUERRA DE LA HERENCIA", sub_title_style))
+    story.append(Paragraph("SOMBRA • LA GUERRA DE LA HERENCIA", sub_title_style))
     
     # Cuadro de introducción
     intro_p = Paragraph(

@@ -38,7 +38,7 @@ class TechDocCanvas(canvas.Canvas):
         
         # Encabezado (páginas > 1)
         if self._pageNumber > 1:
-            self.drawString(54, PAGE_HEIGHT - 36, "LA CANCIÓN DEL SILENCIO • FUENTE TÉCNICA Y ASTROFÍSICA")
+            self.drawString(54, PAGE_HEIGHT - 36, "SOMBRA • FUENTE TÉCNICA Y ASTROFÍSICA")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - 54, PAGE_HEIGHT - 36, "HARD SCIENCE FICTION REFERENCE")
@@ -340,7 +340,7 @@ def generate_science_notes_pdf(md_path, output_filename):
     story = []
     
     # 1. Cabecera y Título
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO • DOCUMENTACIÓN TÉCNICA", styles['SuperTitle']))
+    story.append(Paragraph("SOMBRA • DOCUMENTACIÓN TÉCNICA", styles['SuperTitle']))
     story.append(Paragraph("Fuente Técnica y Notas Científicas: La Llegada del Avatar y la Misión L1", styles['DocTitle']))
     
     # Párrafo introductorio

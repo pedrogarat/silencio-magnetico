@@ -38,7 +38,7 @@ class ArbolCanvas(canvas.Canvas):
         if self._pageNumber > 1:
             self.setFont("Helvetica-Bold", 7.5)
             self.setFillColor(colors.HexColor("#0F172A"))
-            self.drawString(MARGIN, PAGE_HEIGHT - 28, "LA CANCIÓN DEL SILENCIO • MAPA ESTRUCTURAL DE CAPÍTULOS")
+            self.drawString(MARGIN, PAGE_HEIGHT - 28, "SOMBRA • MAPA ESTRUCTURAL DE CAPÍTULOS")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 28, "ÁRBOL COMPLETO DE CAPÍTULOS Y APARTADOS (1 AL 25)")
@@ -186,14 +186,14 @@ def generate_arbol_pdf(output_filename):
     # =========================================================================
     # PORTADILLA Y METADATOS
     # =========================================================================
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO", style_title))
+    story.append(Paragraph("SOMBRA", style_title))
     story.append(Paragraph("ÁRBOL ESTRUCTURAL COMPLETO DE CAPÍTULOS Y APARTADOS (1 AL 25)", style_subtitle))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#1E3A8A"), spaceBefore=0, spaceAfter=8))
 
     meta_table_data = [
         [
             Paragraph("<b>Obra:</b>", style_meta_label),
-            Paragraph("La Canción del Silencio (La Guerra de la Herencia)", style_meta_val),
+            Paragraph("SOMBRA (Trilogía de la Herencia)", style_meta_val),
             Paragraph("<b>Estructura:</b>", style_meta_label),
             Paragraph("3 Actos • 25 Capítulos • 123 Apartados / Escenas", style_meta_val)
         ],

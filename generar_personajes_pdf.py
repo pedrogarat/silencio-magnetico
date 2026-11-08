@@ -38,7 +38,7 @@ class CharactersCanvas(canvas.Canvas):
         
         # Encabezado (páginas > 1)
         if self._pageNumber > 1:
-            self.drawString(54, PAGE_HEIGHT - 36, "LA CANCIÓN DEL SILENCIO • CÓDEX EDITORIAL")
+            self.drawString(54, PAGE_HEIGHT - 36, "SOMBRA • CÓDEX EDITORIAL")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - 54, PAGE_HEIGHT - 36, "ELENCO COMPLETO Y DRAMATIS PERSONAE")
@@ -257,7 +257,7 @@ def generate_pdf():
     
     # Portada / Cabecera
     story.append(Paragraph("CÓDEX DE PERSONAJES", title_style))
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO • LA GUERRA DE LA HERENCIA", sub_title_style))
+    story.append(Paragraph("SOMBRA • LA GUERRA DE LA HERENCIA", sub_title_style))
     
     # Cuadro de introducción
     intro_p = Paragraph(

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SILENCIO MAGNÉTICO | Novela Multiversión</title>
-    <meta name="description" content="Lector oficial de la novela Silencio Magnético. Dirección: Pedro Garat. Realización: Antigravity AI.">
+    <title>SOMBRA | Novela Multiversión</title>
+    <meta name="description" content="Lector oficial de la novela SOMBRA. Dirección: Pedro Garat. Realización: Antigravity AI.">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=1794059595396">
+    <link rel="stylesheet" href="style.css?v=1794135424628">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                 <div class="brand" id="brand-home-link" onclick="showCoverLanding()" style="cursor: pointer;" title="Ir a la Portada y Selector de Ediciones">
                     <span class="brand-logo">⚡</span>
                     <div class="brand-text">
-                        <span class="brand-title">SILENCIO MAGNÉTICO</span>
+                        <span class="brand-title">SOMBRA</span>
                         <div class="brand-version-container"
                             style="display: flex; align-items: center; gap: 6px; margin-top: 2px;">
                             <span id="brand-last-updated" class="brand-last-updated"
@@ -117,10 +117,10 @@
         <aside id="sidebar" class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-cover" id="sidebar-cover-link" style="cursor: pointer;" title="Ir a la Portada">
-                    <img src="cover.jpg" alt="Portada de Silencio Magnético" class="sidebar-cover-img">
+                    <img src="cover.jpg" alt="Portada de SOMBRA" class="sidebar-cover-img">
                 </div>
                 <div class="sidebar-info">
-                    <h3>SILENCIO MAGNÉTICO</h3>
+                    <h3>SOMBRA</h3>
                     <p class="sidebar-author">Dirección: <strong>Pedro Garat</strong> &bull; IA: <strong>Antigravity</strong></p>
                     <p class="sidebar-stats" id="sidebar-stats-text">25 Capítulos &bull; ~360 Páginas &bull; ~122.000
                         Palabras</p>
@@ -136,6 +136,9 @@
                     <button id="btn-sidebar-prologue" class="btn-mini-refresh" onclick="openModal('modal-prologue')"
                         style="margin-top: 6px; padding: 6px 10px; font-size: 0.72rem; width: 100%; justify-content: center; background: rgba(168, 85, 247, 0.12); border: 1px solid #c084fc; color: #c084fc;"
                         title="Leer el prólogo sobre el método de co-creación con IA">📖 Prólogo: IA y Literatura</button>
+                    <button id="btn-sidebar-editorial" class="btn-mini-refresh" onclick="openModal('modal-editorial')"
+                        style="margin-top: 6px; padding: 6px 10px; font-size: 0.72rem; width: 100%; justify-content: center; background: rgba(234, 179, 8, 0.12); border: 1px solid #eab308; color: #eab308;"
+                        title="Ver el Consejo Editorial y Agentes Literarios">🏛️ Consejo Editorial &amp; Agentes</button>
                     <button id="btn-sidebar-characters" class="btn-mini-refresh" onclick="openModal('modal-characters')"
                         style="margin-top: 6px; padding: 6px 10px; font-size: 0.72rem; width: 100%; justify-content: center; background: rgba(16, 185, 129, 0.12); border: 1px solid #10b981; color: #10b981;"
                         title="Ver la galería y fichas oficiales de los personajes">👥 Personajes de la Novela</button>
@@ -163,13 +166,13 @@
                     <!-- Tarjeta Heroica: Portada e Información de la Obra -->
                     <div class="cover-hero-card">
                         <div class="cover-image-box">
-                            <img src="cover.jpg" alt="Portada de Silencio Magnético" class="cover-hero-img">
+                            <img src="cover.jpg" alt="Portada de SOMBRA" class="cover-hero-img">
                             <div class="cover-glow-ambient"></div>
                         </div>
 
                         <div class="cover-hero-info">
                             <div class="cover-kicker">NOVELA DE CIENCIA FICCIÓN &bull; 25 CAPÍTULOS</div>
-                            <h1 class="cover-hero-title">SILENCIO MAGNÉTICO</h1>
+                            <h1 class="cover-hero-title">SOMBRA</h1>
                             <p class="cover-hero-author">Dirección &amp; Coordinación: <strong>Pedro Garat</strong> &bull; Realización Literaria: <strong>Antigravity (IA)</strong></p>
                             <div class="cover-hero-divider"></div>
                             <p class="cover-hero-summary">
@@ -188,6 +191,13 @@
                                     title="Leer el prólogo del autor sobre el papel de la IA y la dirección literaria">
                                     <span>📖</span>
                                     <span>Prólogo del Director: <strong>La IA y la Literatura</strong></span>
+                                    <span>→</span>
+                                </button>
+                                <button id="btn-open-editorial-cover" class="btn-prologue-cta" onclick="openModal('modal-editorial')"
+                                    style="display: inline-flex; align-items: center; gap: 8px; padding: 0.65rem 1.25rem; background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.4); border-radius: 10px; color: #eab308; font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all 0.25s ease;"
+                                    title="Ver el Consejo Editorial y el Estudio de Agentes de IA">
+                                    <span>🏛️</span>
+                                    <span>Consejo Editorial <strong>(Equipo &amp; Agentes IA)</strong></span>
                                     <span>→</span>
                                 </button>
                                 <button id="btn-open-characters-cover" class="btn-prologue-cta" onclick="openModal('modal-characters')"
@@ -374,7 +384,7 @@
                 <!-- Sello de Última Actualización Visible al Final del Capítulo -->
                 <div class="reader-build-stamp"
                     style="text-align: center; margin: 2.5rem 0 1.5rem 0; padding: 1rem; border-top: 1px solid var(--border-color, rgba(255,255,255,0.08)); font-size: 0.78rem; color: var(--text-muted, #94a3b8); font-family: 'JetBrains Mono', monospace;">
-                    <span>⚡ <em>Silencio Magnético</em> &bull; Última compilación sincronizada: <strong
+                    <span>⚡ <em>SOMBRA</em> &bull; Última compilación sincronizada: <strong
                             id="reader-last-updated" style="color: #38bdf8;">-</strong></span>
                     <div style="margin-top: 8px;">
                         <button id="btn-footer-refresh" class="btn-mini-refresh"
@@ -522,7 +532,7 @@
             <div class="modal-header">
                 <div>
                     <h3 style="display: flex; align-items: center; gap: 8px;">👥 Guía Oficial de Personajes</h3>
-                    <p style="font-size: 0.8rem; color: var(--text-muted, #94a3b8); margin: 3px 0 0 0;">Fichas canónicas de identidad, especialidad y psicología del elenco de <em>Silencio Magnético</em></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted, #94a3b8); margin: 3px 0 0 0;">Fichas canónicas de identidad, especialidad y psicología del elenco de <em>SOMBRA</em></p>
                 </div>
                 <button class="close-btn" onclick="closeModal('modal-characters')">&times;</button>
             </div>
@@ -649,6 +659,85 @@
         </div>
     </div>
 
+    <!-- MODAL EDITORIAL: Consejo Editorial y Estudio de Agentes IA -->
+    <div id="modal-editorial" class="modal-overlay hidden">
+        <div class="modal-box modal-extra-large glass" style="max-width: 1050px; max-height: 90vh;">
+            <div class="modal-header">
+                <div>
+                    <h3 style="display: flex; align-items: center; gap: 8px;">🏛️ Consejo Editorial &amp; Agentes Literarios</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-muted, #94a3b8); margin: 3px 0 0 0;">El equipo de co-creación de <em>SOMBRA</em>: Dirección Creativa de Pedro Garat y agentes de Antigravity AI</p>
+                </div>
+                <button class="close-btn" onclick="closeModal('modal-editorial')">&times;</button>
+            </div>
+            <div class="modal-body" style="padding: 1.5rem 2rem; overflow-y: auto;">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="img/editorial_equipo.jpg" alt="Consejo Editorial de SOMBRA: Pedro Garat y los Agentes Literarios" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted, #94a3b8); margin-top: 8px; font-style: italic;">
+                        El Consejo Editorial de SOMBRA en sesión: de izquierda a derecha, Alfred (Hitchcock / Suspense), Bill (Gates / Infraestructura), <strong>Pedro Garat (Director Creativo y Autor en la cabecera)</strong>, Miguel (Cervantes / Prosa), Carl (Sagan / Rigor Científico) y Capitán Memo (Cronista de Bitácora).
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 1rem;">
+                    <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #38bdf8; margin: 0 0 4px 0; font-size: 1rem;">🎯 Pedro Garat — Director &amp; Autor</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Dirección Creativa, Concepción y Veto Final</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Al centro de la mesa. Diseña la visión, la escaleta, el pulso dramático de los 25 capítulos y los dilemas morales de los protagonistas. Como un director de cine ante un rodaje de gran presupuesto, lidera y calibra el trabajo de cada agente.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #fbbf24; margin: 0 0 4px 0; font-size: 1rem;">✍️ Miguel — Maestro de Prosa</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Inspirado en Miguel de Cervantes</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Afilado de estilo literario, diálogos canónicos con voces diferenciadas, textura sensorial y aplicación rigurosa de <em>show, don't tell</em> sin caer en automatismos ni clichés.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #34d399; margin: 0 0 4px 0; font-size: 1rem;">🔭 Carl — Asesor Científico</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Inspirado en Carl Sagan</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Guardián de la física dura (*Hard Sci-Fi*): astrodinámica orbital en L1, fusión magnetohidrodinámica, fotodegradación atmosférica y tecnología de blindaje analógico verosímil.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #f87171; margin: 0 0 4px 0; font-size: 1rem;">🎬 Alfred — Arquitecto de Trama</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Inspirado en Alfred Hitchcock</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Curva de suspense, dosificación de la información, siembra de las armas de Chéjov (magnetófonos analógicos, cintas) y giros dramáticos implacables.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #818cf8; margin: 0 0 4px 0; font-size: 1rem;">💻 Bill — Ingeniero de Despliegue</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Inspirado en Bill Gates</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Infraestructura técnica, generación automatizada de los 75 PDFs multiversión en tipografía clásica, integración con GitHub Pages y sincronización digital en la nube.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(217, 119, 6, 0.08); border: 1px solid rgba(217, 119, 6, 0.3); border-radius: 10px; padding: 14px;">
+                        <h4 style="color: #fbbf24; margin: 0 0 4px 0; font-size: 1rem;">📜 Capitán Memo — Cronista Mayor</h4>
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">Oficial de Bitácora y Memoria Continua</span>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: #cbd5e1; margin-top: 6px;">
+                            Registro literal de cada acuerdo editorial, directriz y debate técnico en <code>historial/historial.md</code> para que la memoria y la continuidad del proyecto sean eternas entre equipos.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center;">
+                    <button class="btn-prologue-cta" onclick="closeModal('modal-editorial'); openModal('modal-prologue');"
+                        style="display: inline-flex; align-items: center; gap: 8px; padding: 0.75rem 1.5rem; background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; border-radius: 10px; color: #38bdf8; font-weight: 600; cursor: pointer;">
+                        <span>📖 Leer el Prólogo Completo del Director</span>
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- MODAL 4: Buscador Global -->
     <div id="modal-search" class="modal-overlay hidden">
         <div class="modal-box glass">
@@ -683,7 +772,7 @@
                 <!-- Columna Izquierda: Reproductor Principal y Controles -->
                 <div class="audiobook-player-card">
                     <div class="audiobook-cover-container">
-                        <img id="ab-cover-img" src="cover.jpg" alt="Carátula Audiolibro Silencio Magnético" class="ab-cover-img">
+                        <img id="ab-cover-img" src="cover.jpg" alt="Carátula Audiolibro SOMBRA" class="ab-cover-img">
                         <div id="ab-equalizer" class="ab-equalizer hidden">
                             <div class="eq-bar"></div>
                             <div class="eq-bar"></div>
@@ -831,8 +920,8 @@
     </div>
 
     <!-- Cargar Datos y Lógica de la App (con control de versión para forzar actualización en móviles) -->
-    <script src="chapters-data.js?v=1794059595396"></script>
-    <script src="app.js?v=1794059595396"></script>
+    <script src="chapters-data.js?v=1794135424628"></script>
+    <script src="app.js?v=1794135424628"></script>
 </body>
 
 </html>

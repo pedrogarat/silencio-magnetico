@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ================================================================================
-MÓDULO DE MAQUETACIÓN EDITORIAL PARA IMPRENTA: "LA CANCIÓN DEL SILENCIO"
+MÓDULO DE MAQUETACIÓN EDITORIAL PARA IMPRENTA: "SOMBRA"
 Ingeniero Editorial: Bill (Infraestructura y Sistemas Editoriales)
 ================================================================================
 Especificaciones Técnicas de Producción Física:
@@ -309,7 +309,7 @@ class PrintCanvas(canvas.Canvas):
 
                 if is_odd:
                     # Página impar: Título de capítulo a la derecha
-                    chap_str = last_chapter_title if last_chapter_title else "La Canción del Silencio"
+                    chap_str = last_chapter_title if last_chapter_title else "SOMBRA"
                     # Acortar si es excesivamente largo
                     if len(chap_str) > 45:
                         chap_str = chap_str[:42] + "..."
@@ -320,7 +320,7 @@ class PrintCanvas(canvas.Canvas):
                 else:
                     # Página par: Título de la obra a la izquierda
                     header_x = MARGIN_CORTE
-                    self.drawString(header_x, header_y, "LA CANCIÓN DEL SILENCIO")
+                    self.drawString(header_x, header_y, "SOMBRA")
                     # Línea de caja: de 15 mm a 128 mm
                     self.line(MARGIN_CORTE, rule_y, MARGIN_CORTE + BOX_WIDTH, rule_y)
 
@@ -511,7 +511,7 @@ def parse_markdown_to_flowables(markdown_content: str, styles: dict) -> list:
     # Página 1 (impar): Falsa portadilla
     story.append(PageMeta("frontmatter"))
     story.append(Spacer(1, 65 * mm))
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO", styles["FalsaPortadilla"]))
+    story.append(Paragraph("SOMBRA", styles["FalsaPortadilla"]))
     story.append(PageBreak())
 
     # Página 2 (par): Reverso en blanco
@@ -523,7 +523,7 @@ def parse_markdown_to_flowables(markdown_content: str, styles: dict) -> list:
     story.append(Spacer(1, 30 * mm))
     story.append(Paragraph("PEDRO GARAT &amp; ANTIGRAVITY", styles["PortadaAutor"]))
     story.append(Spacer(1, 20 * mm))
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO", styles["PortadaTitulo"]))
+    story.append(Paragraph("SOMBRA", styles["PortadaTitulo"]))
     story.append(Spacer(1, 10 * mm))
     story.append(Paragraph("Novela de Ciencia Ficción Dura", styles["PortadaSubtitulo"]))
     story.append(Spacer(1, 55 * mm))
@@ -534,7 +534,7 @@ def parse_markdown_to_flowables(markdown_content: str, styles: dict) -> list:
     story.append(PageMeta("frontmatter"))
     story.append(Spacer(1, 110 * mm))
     colophon_text = (
-        "<b>La Canción del Silencio</b><br/>"
+        "<b>SOMBRA</b><br/>"
         "© 2026 Pedro Garat &amp; Antigravity.<br/>"
         "Todos los derechos reservados.<br/><br/>"
         "<i>Dirección técnica y diseño editorial:</i> Bill (Editorial Engineering Systems)<br/>"

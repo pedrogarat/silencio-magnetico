@@ -103,7 +103,7 @@ def make_canvas_class(act_title, chap_title, edition_label="EDICIÓN HARD SCI-FI
             
             # Encabezado (en TODAS las páginas, incluida la página 1)
             right_header = f"{act_title} • {edition_label}" if act_title else edition_label
-            self.drawString(54, A4[1] - 36, "SILENCIO MAGNÉTICO")
+            self.drawString(54, A4[1] - 36, "SOMBRA")
             self.drawRightString(A4[0] - 54, A4[1] - 36, right_header)
             self.setStrokeColor(colors.HexColor("#CBD5E1"))
             self.setLineWidth(0.5)
@@ -233,7 +233,7 @@ def generate_chapter_pdf(chap_num, input_md_path, output_filename, edition_label
 
     meta = CHAPTER_METADATA.get(chap_num, {
         "titulo": f"Capítulo {chap_num}",
-        "acto": "SILENCIO MAGNÉTICO",
+        "acto": "SOMBRA",
         "new_pdf": f"Capitulo_{chap_num}.pdf",
         "legacy_pdf": f"Capitulo_{chap_num}.pdf"
     })

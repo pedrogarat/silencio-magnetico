@@ -30,7 +30,7 @@ def compile_edition(edition_name, md_folder, pdf_folder, edition_label="EDICIÓN
     return success_count
 
 if __name__ == "__main__":
-    print("Compilación integral de las 3 ediciones oficiales de SILENCIO MAGNÉTICO con encabezados activos en todas las páginas...")
+    print("Compilación integral de las 3 ediciones oficiales de SOMBRA con encabezados activos en todas las páginas...")
     c1 = compile_edition("Hard Sci-Fi (Canon Original)", os.path.join("novela", "capitulos"), os.path.join("novela", "pdf_hard"), edition_label="EDICIÓN HARD SCI-FI")
     c2 = compile_edition("Sci-Fi (Divulgativa / Narrativa)", os.path.join("novela", "capitulos_scifi"), os.path.join("novela", "pdf_scifi"), edition_label="EDICIÓN SCI-FI (NARRATIVA)")
     c3 = compile_edition("Juvenil / Adolescente", os.path.join("novela", "capitulos_juvenil"), os.path.join("novela", "pdf_juvenil"), edition_label="EDICIÓN JUVENIL")

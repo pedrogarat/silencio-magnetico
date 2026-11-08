@@ -38,7 +38,7 @@ class SinopsisCanvas(canvas.Canvas):
         if self._pageNumber > 1:
             self.setFont("Helvetica-Bold", 7.5)
             self.setFillColor(colors.HexColor("#1E3A8A"))
-            self.drawString(MARGIN, PAGE_HEIGHT - 36, "LA CANCIÓN DEL SILENCIO • CÓDEX EDITORIAL")
+            self.drawString(MARGIN, PAGE_HEIGHT - 36, "SOMBRA • CÓDEX EDITORIAL")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 36, "SINOPSIS GENERAL Y ESTRUCTURA POR ACTOS")
@@ -213,7 +213,7 @@ def build_pdf(output_filename):
     # =========================================================================
     # PORTADA / ENCABEZADO PRINCIPAL
     # =========================================================================
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO", style_title))
+    story.append(Paragraph("SOMBRA", style_title))
     story.append(Paragraph("SINOPSIS GENERAL Y ESTRUCTURA NARRATIVA COMPLETA", style_subtitle))
 
     # Caja de metadatos del documento
@@ -251,7 +251,7 @@ def build_pdf(output_filename):
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#1E3A8A"), spaceBefore=2, spaceAfter=8))
 
     p_intro = Paragraph(
-        "<i>La Canción del Silencio</i> articula su trama sobre una arquitectura narrativa clásica de tres grandes actos, "
+        "<i>SOMBRA</i> articula su trama sobre una arquitectura narrativa clásica de tres grandes actos, "
         "calibrada bajo un rigor científico estricto (<i>hard sci-fi</i>) y una cuenta atrás implacable impuesta por las leyes de la astrodinámica y la física electromagnética. "
         "A continuación se detalla la función dramática de cada acto:",
         style_body

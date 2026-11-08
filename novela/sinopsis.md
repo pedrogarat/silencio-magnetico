@@ -1,4 +1,4 @@
-# 📖 LA CANCIÓN DEL SILENCIO
+# 📖 SOMBRA
 ## Sinopsis General y Estructura Narrativa por Actos
 
 > **Documento Oficial de Coordinación Editorial**  
@@ -10,7 +10,7 @@
 
 ## 🏛️ PARTE I: LA ARQUITECTURA DRAMÁTICA EN TRES ACTOS
 
-La trama de *La Canción del Silencio* se articula sobre una estructura clásica de tres actos escalonada con precisión cronológica y física. El detonante arranca en 1945 con el nacimiento de la era atómica y desemboca en 2026-2027 con una lucha desesperada contra el tiempo para salvar la biosfera terrestre de un depredador electromagnético extraterrestre.
+La trama de *SOMBRA* se articula sobre una estructura clásica de tres actos escalonada con precisión cronológica y física. El detonante arranca en 1945 con el nacimiento de la era atómica y desemboca en 2026-2027 con una lucha desesperada contra el tiempo para salvar la biosfera terrestre de un depredador electromagnético extraterrestre.
 
 ```
        [ 1945: Trinity ] ─── Pulso electromagnético involuntario al cosmos

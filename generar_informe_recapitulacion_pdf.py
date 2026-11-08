@@ -38,7 +38,7 @@ class ReportCanvas(canvas.Canvas):
         
         # Encabezado (páginas > 1)
         if self._pageNumber > 1:
-            self.drawString(54, PAGE_HEIGHT - 36, "LA CANCIÓN DEL SILENCIO • CÓDICE EDITORIAL Y AUDITORÍA DE CONTINUIDAD")
+            self.drawString(54, PAGE_HEIGHT - 36, "SOMBRA • CÓDICE EDITORIAL Y AUDITORÍA DE CONTINUIDAD")
             self.setFont("Helvetica", 7.5)
             self.setFillColor(colors.HexColor("#64748B"))
             self.drawRightString(PAGE_WIDTH - 54, PAGE_HEIGHT - 36, "RECAPITULACIÓN OFICIAL • CAPÍTULOS 1 AL 10")
@@ -204,7 +204,7 @@ def generate_report_pdf(output_filename):
     
     # ---------------- PORTADA / ENCABEZADO ----------------
     story.append(Spacer(1, 8))
-    story.append(Paragraph("LA CANCIÓN DEL SILENCIO • CÓDICE RECTOR Y AUDITORÍA EDITORIAL", super_title))
+    story.append(Paragraph("SOMBRA • CÓDICE RECTOR Y AUDITORÍA EDITORIAL", super_title))
     story.append(Paragraph("Informe de Recapitulación General de la Obra", main_title))
     story.append(Paragraph("Control de Continuidad, Arcos Psicológicos, Flujo de Información y Fases del Colapso (Capítulos 1 al 10)", subtitle))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#0284C7"), spaceBefore=2, spaceAfter=12))
@@ -554,7 +554,7 @@ def generate_report_pdf(output_filename):
             "6. [ ] ¿Las voces suenan diferenciadas (Girard cartesiano, Sarah vehemente, Wright operacional, Pleh aritmético, Ramos estadista empático y católico)?<br/>"
             "7. [ ] ¿Se respeta la dimensión espiritual y ética de los personajes sin deslices antirreligiosos ni cinismo?<br/>"
             "8. [ ] ¿Las afirmaciones críticas se sostienen con pruebas empíricas sólidas?<br/><br/>"
-            "<b>Conclusión de Auditoría:</b> La obra goza de una salud narrativa y editorial excepcional. La combinación de rigor astrofísico y calidez humana convierte a <i>La Canción del Silencio</i> en una obra cumbre de la ciencia ficción dura en lengua española.",
+            "<b>Conclusión de Auditoría:</b> La obra goza de una salud narrativa y editorial excepcional. La combinación de rigor astrofísico y calidez humana convierte a <i>SOMBRA</i> en una obra cumbre de la ciencia ficción dura en lengua española.",
             body_style
         )
     ]))

@@ -1,5 +1,5 @@
 # 🌌 PRÓLOGO: LA INTELIGENCIA ARTIFICIAL Y LA DIRECCIÓN LITERARIA
-## La Creación de *Silencio Magnético* y el Nuevo Paradigma de Co-Creación Humano-Máquina
+## La Creación de *SOMBRA* y el Nuevo Paradigma de Co-Creación Humano-Máquina
 
 > **Por Pedro Garat (Dirección Creativa, Concepción y Coordinación Editorial)**  
 > **Con la asistencia del Estudio de Agentes de Antigravity AI (Google DeepMind)**  
@@ -13,7 +13,7 @@ El libro que tienes ante ti no ha sido escrito a la manera tradicional, y consid
 
 **Mi papel en esta obra no ha sido literario en el sentido estricto del redactor que busca la frase en la soledad del papel en blanco; mi papel ha sido el de Dirección, Arquitectura y Coordinación.**
 
-En la cinematografía moderna, nadie le exige al director de cine que fabrique las lentes de las cámaras, que interprete a los personajes o que componga cada acorde de la banda sonora: su mérito reside en concebir la visión, elegir el tono, articular la estructura dramática, exigir rigor en cada escena, coordinar a los especialistas y vetar implacablemente todo aquello que no sirva al corazón de la historia. En *Silencio Magnético*, he asumido exactamente esa función: la de *Showrunner* y Director Creativo ante una infraestructura de Inteligencia Artificial avanzada proporcionada por el equipo de Google DeepMind a través de **Antigravity**.
+En la cinematografía moderna, nadie le exige al director de cine que fabrique las lentes de las cámaras, que interprete a los personajes o que componga cada acorde de la banda sonora: su mérito reside en concebir la visión, elegir el tono, articular la estructura dramática, exigir rigor en cada escena, coordinar a los especialistas y vetar implacablemente todo aquello que no sirva al corazón de la historia. En *SOMBRA*, he asumido exactamente esa función: la de *Showrunner* y Director Creativo ante una infraestructura de Inteligencia Artificial avanzada proporcionada por el equipo de Google DeepMind a través de **Antigravity**.
 
 Antigravity no ha sido un "botón milagroso" al que se le pide «escribe una novela de ciencia ficción». Hacer eso produce textos genéricos, planos y carentes de pulso vital. Lo que aquí se ha construido es un **estudio de desarrollo literario e ingenieril asistido por agentes autónomos especializados**, donde cada decisión conceptual, cada prueba física, cada dilema moral de los protagonistas y cada punto de inflexión argumental han sido deliberadamente concebidos, calibrados y dirigidos por un criterio humano intransigente.
 
@@ -22,6 +22,9 @@ Antigravity no ha sido un "botón milagroso" al que se le pide «escribe una nov
 ### II. EL EQUIPO INVISIBLE: LA ARQUITECTURA DE AGENTES ESPECIALIZADOS
 
 Para lograr una novela de más de 120.000 palabras que mantuviera la coherencia a lo largo de 25 capítulos densos, fue necesario diseñar una metodología de trabajo modular. Inspirándonos en figuras históricas y arquetipos de excelencia, creamos y parametrizamos cinco entidades operativas (`skills`) dentro del entorno de trabajo, cada una con un mandato claro y sin concesiones:
+
+![Consejo Editorial de SOMBRA](img/editorial_equipo.jpg)
+*El Consejo Editorial de SOMBRA en sesión de trabajo: Pedro Garat (Dirección Creativa y Coordinación Editorial, al centro) coordinando la obra junto a los agentes literarios Miguel (Prosa y Estilo / Cervantes), Carl (Rigor Científico / Sagan), Alfred (Tensión y Suspense / Hitchcock), Bill (Infraestructura / Gates) y Capitán Memo (Cronista y Bitácora).*
 
 ```
                           ┌────────────────────────┐
@@ -48,7 +51,7 @@ Para lograr una novela de más de 120.000 palabras que mantuviera la coherencia 
 ```
 
 1. **MIGUEL (Maestro de Prosa y Textura Literaria — Inspirado en Miguel de Cervantes):**  
-   Encargado de la redacción estilística, el ritmo de las oraciones y la riqueza del vocabulario castellano. Su instrucción primordial fue desterrar los automatismos y frases cliché de los modelos de lenguaje genéricos, aplicar con rigor la máxima de *"show, don't tell"* (mostrar en lugar de explicar), tallar voces diferenciadas para cada personaje y aportar textura física a los escenarios: el frío metálico de la base de Nellis, el hedor a ozono tras el choque de corrientes o el desgarro íntimo de los diálogos familiares.
+   Encargado de la redacción estilística, el ritmo de las oraciones y la riqueza del vocabulario castellano. Su instrucción primordial fue desterrar los automatismos y frases cliché de los modelos de lenguaje genéricos, aplicar con rigor la máxima de *"show, don't tell"* (mostrar en lugar de explicar), tallar voces diferenciadas para cada personaje y aportar textura física a los escenarios: el frío metálico de la base de Nellis, el choque magnético de corrientes o el desgarro íntimo de los diálogos familiares.
 
 2. **CARL (Asesor Científico y Astrofísico — Inspirado en Carl Sagan):**  
    El guardián de la verosimilitud *Hard Sci-Fi*. Carl auditó implacablemente cada concepto de física teórica y aplicada: la dinámica orbital en el punto de Lagrange L1, las matemáticas del confinamiento magnético en reactores MHD, el fenómeno de *quench* superconductor, la fotodegradación del ozono por protones solares, y la imposibilidad de que las ondas electromagnéticas traspasaran la malla de Sombra. Carl tradujo ecuaciones en prosa visual sin abaratar la ciencia ni insultar la inteligencia del lector.
@@ -66,7 +69,7 @@ Para lograr una novela de más de 120.000 palabras que mantuviera la coherencia 
 
 ### III. LA GÉNESIS ARGUMENTAL: CÓMO SE FRAGUÓ LA HISTORIA
 
-La concepción de *Silencio Magnético* nació de una pregunta científica y filosófica: **¿Qué ocurriría si el mayor peligro cósmico para la Tierra no fuera un impacto balístico de asteroides, sino la desactivación silenciosa de nuestro escudo protector natural: la magnetosfera?**
+La concepción de *SOMBRA* nació de una pregunta científica y filosófica: **¿Qué ocurriría si el mayor peligro cósmico para la Tierra no fuera un impacto balístico de asteroides, sino la desactivación silenciosa de nuestro escudo protector natural: la magnetosfera?**
 
 A partir de esa premisa, tracé la arquitectura en tres actos:
 
@@ -99,7 +102,7 @@ La elaboración de esta novela ha requerido un despliegue tecnológico inédito 
 
 ### V. CONCLUSIÓN: EL ARTE EN LA ERA DE LA SÍNTESIS DIGITAL
 
-*Silencio Magnético* es la prueba tangible de que la Inteligencia Artificial no ha venido a sustituir la sensibilidad ni el ingenio del ser humano, sino a otorgarle **un exoesqueleto creativo de escala sin precedentes**. 
+*SOMBRA* es la prueba tangible de que la Inteligencia Artificial no ha venido a sustituir la sensibilidad ni el ingenio del ser humano, sino a otorgarle **un exoesqueleto creativo de escala sin precedentes**. 
 
 Un solo creador, armado con una visión clara, un método riguroso y una orquestación inteligente de agentes, puede hoy concebir, desarrollar, auditar científicamente, pulir literariamente y editar una obra monumental que antes habría requerido el trabajo de un departamento editorial completo a lo largo de varios años.
 
@@ -108,5 +111,5 @@ La inteligencia artificial aportó el músculo computacional, la riqueza lexical
 Te invito a sumergirte en las páginas que siguen. El silencio del cosmos está a punto de romperse.
 
 **Pedro Garat**  
-*Director y Coordinador Creativo de «Silencio Magnético»*
+*Director y Coordinador Creativo de «SOMBRA»*
 

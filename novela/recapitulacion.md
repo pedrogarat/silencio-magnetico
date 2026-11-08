@@ -1,5 +1,5 @@
 # 📜 Códice de Redacción y Recapitulación Editorial
-## *La Canción del Silencio / La Guerra de la Herencia*
+## *SOMBRA (Trilogía de la Herencia)*
 
 Este documento es el **Códice Rector y Filtro Obligatorio de Coherencia**. Define las reglas inquebrantables de narrativa, estilo, tono y desarrollo de personajes para toda la obra.
 
