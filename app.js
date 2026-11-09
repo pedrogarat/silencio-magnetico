@@ -240,6 +240,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Formulario de Comentarios Nativos
+        const commentForm = document.getElementById('comment-publish-form');
+        if (commentForm) {
+            commentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                publishChapterComment();
+            });
+        }
+
         document.querySelectorAll('.modal-overlay').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) modal.classList.add('hidden');
@@ -677,28 +686,209 @@ document.addEventListener('DOMContentLoaded', () => {
         closeSidebar();
     }
 
-    // --- COMENTARIOS DINÁMICOS POR CAPÍTULO (CUSDIS) ---
+    // --- SISTEMA NATIVO DE COMENTARIOS (FIREBASE FIRESTORE) ---
+    const firebaseConfig = {
+        apiKey: "AIzaSyBpbOxU7zo_3_kmvUElNyalYv_qYu7Dc3U",
+        authDomain: "sombra-novela.firebaseapp.com",
+        projectId: "sombra-novela",
+        storageBucket: "sombra-novela.firebasestorage.app",
+        messagingSenderId: "345722094648",
+        appId: "1:345722094648:web:21f9b1bc6da39e9dddd2cd"
+    };
+
+    let firestoreDb = null;
+    function getFirestoreDb() {
+        if (!firestoreDb && typeof firebase !== 'undefined') {
+            try {
+                if (!firebase.apps.length) {
+                    firebase.initializeApp(firebaseConfig);
+                }
+                firestoreDb = firebase.firestore();
+            } catch(e) {
+                console.warn('Error inicializando Firestore:', e);
+            }
+        }
+        return firestoreDb;
+    }
+
+    function escapeCommentHtml(str) {
+        if (!str) return '';
+        const d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+    }
+
+    function formatCommentTimestamp(timestamp) {
+        if (!timestamp) return 'Reciente';
+        const d = new Date(timestamp);
+        const now = new Date();
+        const diffSeconds = Math.floor((now - d) / 1000);
+        if (diffSeconds < 60) return 'Hace un instante';
+        if (diffSeconds < 3600) return `Hace ${Math.floor(diffSeconds / 60)} min`;
+        if (diffSeconds < 86400) return `Hace ${Math.floor(diffSeconds / 3600)} h`;
+        if (diffSeconds < 86400 * 7) return `Hace ${Math.floor(diffSeconds / 86400)} días`;
+        return d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
     function updateChapterComments(chap) {
         const commentsLabel = document.getElementById('comments-chapter-label');
-        const thread = document.getElementById('cusdis_thread');
-        if (!thread) return;
-
-        const pageId = `sombra-cap-${chap.id}`;
-        const pageTitle = chap.title.startsWith('Capítulo') ? chap.title : `Capítulo ${chap.id}: ${chap.title}`;
-        const pageUrl = `https://pedrogarat.github.io/sombra/#cap-${chap.id}`;
-
+        const authorInput = document.getElementById('comment-author-input');
         if (commentsLabel) {
-            commentsLabel.textContent = `Comparte tus impresiones y reflexiones sobre ${pageTitle}`;
+            const chapTitle = chap.title.startsWith('Capítulo') ? chap.title : `Capítulo ${chap.id}: ${chap.title}`;
+            commentsLabel.textContent = `Comparte tus impresiones, teorías y reflexiones sobre ${chapTitle}`;
         }
 
-        thread.dataset.pageId = pageId;
-        thread.dataset.pageUrl = pageUrl;
-        thread.dataset.pageTitle = pageTitle;
-
-        // Si la librería Cusdis está disponible en la ventana, re-renderizar la caja
-        if (window.CUSDIS && typeof window.CUSDIS.renderTo === 'function') {
-            window.CUSDIS.renderTo(thread);
+        // Cargar nombre recordado en localStorage
+        if (authorInput) {
+            const savedName = localStorage.getItem('sombra_commenter_name');
+            if (savedName && !authorInput.value) {
+                authorInput.value = savedName;
+            }
         }
+
+        // Cargar comentarios del capítulo
+        fetchChapterComments(chap.id);
+    }
+
+    function fetchChapterComments(chapterId) {
+        const container = document.getElementById('comments-list-container');
+        const countBadge = document.getElementById('comments-count-badge');
+        if (!container) return;
+
+        container.innerHTML = '<div class="comments-empty-state">Cargando comentarios...</div>';
+
+        const db = getFirestoreDb();
+        if (!db) {
+            container.innerHTML = '<div class="comments-empty-state">💬 Escribe el primer comentario sobre este capítulo.</div>';
+            return;
+        }
+
+        db.collection('comments')
+            .where('chapter_id', '==', chapterId)
+            .get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    if (countBadge) countBadge.textContent = '0';
+                    container.innerHTML = `
+                        <div class="comments-empty-state">
+                            💬 Aún no hay comentarios en este capítulo.<br>
+                            <span style="font-size: 0.8rem; opacity: 0.85; margin-top: 6px; display: inline-block;">
+                                ¡Sé el primero en compartir tu opinión o teoría sobre los acontecimientos!
+                            </span>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const comments = [];
+                snapshot.forEach(doc => {
+                    comments.push({ id: doc.id, ...doc.data() });
+                });
+
+                // Ordenar por fecha cronológica (los más recientes abajo)
+                comments.sort((a, b) => (a.created_at || 0) - (b.created_at || 0));
+
+                if (countBadge) countBadge.textContent = String(comments.length);
+
+                container.innerHTML = comments.map(c => {
+                    const author = escapeCommentHtml(c.author_name || 'Lector anónimo');
+                    const initial = author.charAt(0).toUpperCase() || 'L';
+                    const text = escapeCommentHtml(c.content || '');
+                    const dateStr = formatCommentTimestamp(c.created_at);
+                    const editionBadge = c.edition ? `<span class="comment-edition-badge">${escapeCommentHtml(c.edition)}</span>` : '';
+
+                    return `
+                        <div class="comment-item">
+                            <div class="comment-avatar">${initial}</div>
+                            <div class="comment-content-wrap">
+                                <div class="comment-meta">
+                                    <span class="comment-author-name">${author}</span>
+                                    ${editionBadge}
+                                    <span class="comment-date">• ${dateStr}</span>
+                                </div>
+                                <div class="comment-body-text">${text}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            })
+            .catch(err => {
+                console.warn('Error leyendo comentarios de Firestore:', err);
+                // Si la colección aún no existe o está inicializándose en Firestore
+                if (countBadge) countBadge.textContent = '0';
+                container.innerHTML = `
+                    <div class="comments-empty-state">
+                        💬 Comparte tu opinión o teoría sobre este capítulo.
+                    </div>
+                `;
+            });
+    }
+
+    function publishChapterComment() {
+        const authorInput = document.getElementById('comment-author-input');
+        const textInput = document.getElementById('comment-text-input');
+        const submitBtn = document.getElementById('btn-submit-comment');
+        const statusSpan = document.getElementById('comment-form-status');
+
+        if (!textInput || !textInput.value.trim()) return;
+
+        const authorName = (authorInput && authorInput.value.trim()) ? authorInput.value.trim() : 'Lector anónimo';
+        const contentText = textInput.value.trim();
+        const currentChap = NOVEL_DATA.chapters[currentChapterIndex];
+        if (!currentChap) return;
+
+        // Guardar nombre para que el lector no tenga que reescribirlo
+        localStorage.setItem('sombra_commenter_name', authorName);
+
+        const db = getFirestoreDb();
+        if (!db) {
+            alert('El servicio de comentarios se está conectando. Por favor, reintenta en un momento.');
+            return;
+        }
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Publicando...</span> ⏳';
+        }
+        if (statusSpan) {
+            statusSpan.textContent = 'Guardando tu comentario...';
+            statusSpan.style.color = '#38bdf8';
+        }
+
+        const newComment = {
+            chapter_id: currentChap.id,
+            author_name: authorName,
+            content: contentText,
+            edition: currentEdition || 'general',
+            created_at: Date.now()
+        };
+
+        db.collection('comments').add(newComment)
+            .then(() => {
+                textInput.value = '';
+                if (statusSpan) {
+                    statusSpan.textContent = '✓ ¡Comentario publicado con éxito!';
+                    statusSpan.style.color = '#34d399';
+                    setTimeout(() => {
+                        statusSpan.textContent = 'Tu comentario es visible de inmediato para todos los lectores.';
+                        statusSpan.style.color = '';
+                    }, 4000);
+                }
+                fetchChapterComments(currentChap.id);
+            })
+            .catch(err => {
+                console.error('Error publicando comentario:', err);
+                if (statusSpan) {
+                    statusSpan.textContent = 'Error al publicar. Verifica tu conexión e inténtalo de nuevo.';
+                    statusSpan.style.color = '#f87171';
+                }
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Publicar Comentario</span> 🚀';
+                }
+            });
     }
 
     function updateNavButtons() {
