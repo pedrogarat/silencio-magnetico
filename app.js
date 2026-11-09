@@ -173,12 +173,27 @@ document.addEventListener('DOMContentLoaded', () => {
             currentChapterIndex = 0;
         }
 
-        // Al entrar en la web, mostrar siempre la Portada y las tres versiones
-        try {
-            showCoverView();
-        } catch(e) {
-            console.error('Error showing cover view, falling back to chapter 0:', e);
-            loadChapter(0);
+        // Comprobar si se accede con un hash directo a un capítulo (ej: #cap-3)
+        let initialChapter = null;
+        if (window.location.hash) {
+            const m = window.location.hash.match(/^#cap-(\d+)$/);
+            if (m) {
+                const targetId = parseInt(m[1], 10);
+                const foundIdx = NOVEL_DATA.chapters.findIndex(c => c.id === targetId);
+                if (foundIdx !== -1) initialChapter = foundIdx;
+            }
+        }
+
+        if (initialChapter !== null) {
+            loadChapter(initialChapter);
+        } else {
+            // Al entrar en la web sin hash específico, mostrar la Portada y las tres versiones
+            try {
+                showCoverView();
+            } catch(e) {
+                console.error('Error showing cover view, falling back to chapter 0:', e);
+                loadChapter(0);
+            }
         }
 
         try { setupEventListeners(); } catch(e) { console.error('Error in setupEventListeners:', e); }
@@ -648,7 +663,42 @@ document.addEventListener('DOMContentLoaded', () => {
         readStatus[chap.id] = true;
         localStorage.setItem('prometheus_read_status', JSON.stringify(readStatus));
 
+        // Actualizar sección de comentarios (Cusdis)
+        updateChapterComments(chap);
+
+        // Actualizar URL y hash para Cloudflare Analytics (medición por capítulo en SPA)
+        try {
+            const chapHash = `#cap-${chap.id}`;
+            if (window.location.hash !== chapHash) {
+                history.replaceState({ chapterIndex: index }, chap.title, chapHash);
+            }
+        } catch(e) {}
+
         closeSidebar();
+    }
+
+    // --- COMENTARIOS DINÁMICOS POR CAPÍTULO (CUSDIS) ---
+    function updateChapterComments(chap) {
+        const commentsLabel = document.getElementById('comments-chapter-label');
+        const thread = document.getElementById('cusdis_thread');
+        if (!thread) return;
+
+        const pageId = `sombra-cap-${chap.id}`;
+        const pageTitle = chap.title.startsWith('Capítulo') ? chap.title : `Capítulo ${chap.id}: ${chap.title}`;
+        const pageUrl = `https://pedrogarat.github.io/sombra/#cap-${chap.id}`;
+
+        if (commentsLabel) {
+            commentsLabel.textContent = `Comparte tus impresiones y reflexiones sobre ${pageTitle}`;
+        }
+
+        thread.dataset.pageId = pageId;
+        thread.dataset.pageUrl = pageUrl;
+        thread.dataset.pageTitle = pageTitle;
+
+        // Si la librería Cusdis está disponible en la ventana, re-renderizar la caja
+        if (window.CUSDIS && typeof window.CUSDIS.renderTo === 'function') {
+            window.CUSDIS.renderTo(thread);
+        }
     }
 
     function updateNavButtons() {

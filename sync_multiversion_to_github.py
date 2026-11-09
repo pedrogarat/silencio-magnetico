@@ -89,7 +89,7 @@ def main():
     print("\nAñadiendo archivos al índice de Git...")
     run_cmd("git add -A", cwd=TEMP_SYNC_DIR)
 
-    commit_msg = "docs: actualizar enlace web a https://pedrogarat.github.io/sombra/"
+    commit_msg = "feat: integrar Cloudflare Web Analytics (SPA) y estructura para comentarios Cusdis por capitulo"
     print(f"\nCreando commit: '{commit_msg}'...")
     try:
         run_cmd(f'git commit -m "{commit_msg}"', cwd=TEMP_SYNC_DIR)

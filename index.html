@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=1794137582091">
+    <link rel="stylesheet" href="style.css?v=1794257541880">
 </head>
 
 <body>
@@ -380,6 +380,32 @@
                         <span class="arrow">→</span>
                     </button>
                 </nav>
+
+                <!-- Sección de Comentarios de Lectores (Cusdis) -->
+                <section id="chapter-comments-section" class="chapter-comments-section"
+                    style="margin-top: 3rem; padding: 2rem 1.5rem; background: rgba(15, 23, 42, 0.4); border: 1px solid var(--border-color, rgba(255,255,255,0.08)); border-radius: 14px;">
+                    <div class="comments-header" style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                        <div>
+                            <h3 style="display: flex; align-items: center; gap: 8px; font-size: 1.25rem; color: var(--text-heading, #f8fafc); margin: 0;">
+                                💬 Comentarios de Lectores
+                            </h3>
+                            <p id="comments-chapter-label" style="font-size: 0.82rem; color: var(--text-muted, #94a3b8); margin: 4px 0 0 0;">
+                                Comparte tus impresiones, teorías y reflexiones sobre este capítulo
+                            </p>
+                        </div>
+                        <span class="meta-pill" style="font-size: 0.72rem; opacity: 0.85;">Sin registro previo requerido</span>
+                    </div>
+
+                    <!-- Contenedor dinámico de Cusdis -->
+                    <div id="cusdis_thread"
+                        data-host="https://cusdis.com"
+                        data-app-id=""
+                        data-page-id="sombra-cap-1"
+                        data-page-url="https://pedrogarat.github.io/sombra/#cap-1"
+                        data-page-title="Capítulo 1: Alamogordo"
+                        data-theme="dark">
+                    </div>
+                </section>
 
                 <!-- Sello de Última Actualización Visible al Final del Capítulo -->
                 <div class="reader-build-stamp"
@@ -937,8 +963,15 @@
     </div>
 
     <!-- Cargar Datos y Lógica de la App (con control de versión para forzar actualización en móviles) -->
-    <script src="chapters-data.js?v=1794137582091"></script>
-    <script src="app.js?v=1794137582091"></script>
+    <script src="chapters-data.js?v=1794257541880"></script>
+    <script src="app.js?v=1794257541880"></script>
+
+    <!-- Script de Comentarios Cusdis (Ligero y sin cookies) -->
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+    <!-- Cloudflare Web Analytics (con soporte SPA para medir capítulos individuales) -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8aed3a79a7cd475d838aee595ca4a53c", "spa": true}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
