@@ -117,11 +117,15 @@ Nadie sospechaba que la verdadera explosión acababa de escapar al espacio.
 
 El aire del planeta frenó el calor y la ceniza de la bomba. Pero la radiación invisible escapó al cosmos a la velocidad de la luz: trescientos mil kilómetros por segundo.
 
-En el instante del estallido, un pulso electromagnético cruzó el cielo y se adentró en el vacío:
+En el instante exacto de la fisión, el núcleo de plutonio liberó un pulso invisible de radiación de alta energía y firmas isotópicas artificiales que perforó la ionosfera terrestre y se expandió hacia la negrura del vacío a trescientos mil kilómetros por segundo:
 
-• En pocos minutos pasó junto a la Luna y cruzó la órbita de Marte.  
-• Antes del mediodía rebasó los anillos de Saturno y los planetas gigantes.  
-• Horas más tarde atravesó el cinturón helado de asteroides y alcanzó la última frontera del sistema solar: la **Nube de Oort**.
+• A las **05:29:47 AM**, la onda barrió el regolito gris y silencioso de la Luna.  
+• A las **05:44 AM**, cruzó el cielo desierto de Marte.  
+• A las **06:15 AM**, atravesó la inmensidad tormentosa de Júpiter.  
+• A las **07:05 AM**, acarició los anillos de hielo de Saturno.  
+• A las **09:42 AM**, rebasó la órbita de Neptuno y se internó en el frío perpetuo del Cinturón de Kuiper.  
+
+Y horas más tarde, tras devorar miles de millones de kilómetros por el desierto cósmico, aquel suspiro nacido en Alamogordo alcanzó la última frontera de nuestro sistema planetario: la **Nube de Oort**.
 
 Allí, a casi un año luz de la Tierra, el Sol es solo una mota de luz diminuta entre millones de estrellas. Es un océano gigantesco y helado donde flotan miles de millones de cometas congelados a doscientos setenta grados bajo cero. Un lugar donde reinaba el silencio desde hacía miles de millones de años.
 

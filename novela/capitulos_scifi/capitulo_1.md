@@ -117,11 +117,15 @@ Nadie sospechaba que la verdadera detonación no se había quedado en la arena d
 
 La atmósfera de la Tierra retuvo la onda expansiva del aire y las cenizas radiactivas. La radiación electromagnética escapó al cosmos a trescientos mil kilómetros por segundo.
 
-En el instante de la fisión, un pulso invisible perforó la ionosfera y se expandió por el vacío:
+En el instante exacto de la fisión, el núcleo de plutonio liberó un pulso invisible de radiación de alta energía y firmas isotópicas artificiales que perforó la ionosfera terrestre y se expandió hacia la negrura del vacío a trescientos mil kilómetros por segundo:
 
-• Minutos después cruzó la órbita de Marte.  
-• Antes del mediodía rebasó los anillos de Saturno y los gigantes gaseosos.  
-• Horas más tarde atravesó el cinturón helado de Kuiper y alcanzó la última frontera del sistema planetario: la **Nube de Oort**.
+• A las **05:29:47 AM**, la onda barrió el regolito gris y silencioso de la Luna.  
+• A las **05:44 AM**, cruzó el cielo desierto de Marte.  
+• A las **06:15 AM**, atravesó la inmensidad tormentosa de Júpiter.  
+• A las **07:05 AM**, acarició los anillos de hielo de Saturno.  
+• A las **09:42 AM**, rebasó la órbita de Neptuno y se internó en el frío perpetuo del Cinturón de Kuiper.  
+
+Y horas más tarde, tras devorar miles de millones de kilómetros por el desierto cósmico, aquel suspiro nacido en Alamogordo alcanzó la última frontera de nuestro sistema planetario: la **Nube de Oort**.
 
 Allí, a casi un año luz de la Tierra, el Sol es apenas una estrella solitaria entre millones. Un océano infinito de miles de millones de cometas errantes, bloques ciclópeos de hielo y roca a doscientos setenta grados bajo cero donde nada había cambiado desde el origen del sistema solar.
 
