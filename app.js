@@ -965,15 +965,23 @@ document.addEventListener('DOMContentLoaded', () => {
         text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
 
-        // Párrafos
+        // Párrafos y Listas con soporte para saltos de línea
         const lines = text.split(/\n\s*\n/);
         const parsedParagraphs = lines.map(block => {
-            const trimmed = block.trim();
+            let trimmed = block.trim();
             if (!trimmed) return '';
             if (trimmed.startsWith('<h') || trimmed.startsWith('<div') || trimmed.startsWith('<pre') || trimmed.startsWith('<figure')) {
                 return trimmed;
             }
-            return `<p>${trimmed}</p>`;
+            // Soporte para saltos de línea de Markdown (dos o más espacios al final de línea o saltos explícitos)
+            trimmed = trimmed.replace(/[ \t]{2,}\n/g, '<br>');
+            // Soporte para viñetas y listas compactas dentro de un mismo bloque
+            trimmed = trimmed.replace(/\n(?=\s*[•\-])/g, '<br>');
+            trimmed = trimmed.replace(/\n(?=\s*\d+\.\s)/g, '<br>');
+
+            const isBullet = trimmed.startsWith('•') || trimmed.startsWith('-') || /^\d+\.\s/.test(trimmed) || trimmed.includes('<br>•');
+            const cls = isBullet ? ' class="novel-bullet-list"' : '';
+            return `<p${cls}>${trimmed}</p>`;
         });
 
         return parsedParagraphs.join('\n');

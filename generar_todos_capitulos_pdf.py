@@ -286,6 +286,15 @@ def generate_chapter_pdf(chap_num, input_md_path, output_filename, edition_label
         alignment=4 # Justificado
     )
 
+    bullet_style = ParagraphStyle(
+        'BulletItem',
+        parent=body_style,
+        leftIndent=14,
+        firstLineIndent=-14,
+        spaceAfter=4,
+        alignment=0 # Alineado a la izquierda para viñetas y listas
+    )
+
     story = []
     lines = content.split('\n')
     
@@ -403,7 +412,10 @@ def generate_chapter_pdf(chap_num, input_md_path, output_filename, edition_label
 
         # Formato de texto y diálogos
         clean_line = format_markdown_inline(stripped)
-        story.append(Paragraph(clean_line, body_style))
+        if stripped.startswith('•') or stripped.startswith('- ') or (len(stripped) > 2 and stripped[0].isdigit() and stripped[1] == '.'):
+            story.append(Paragraph(clean_line, bullet_style))
+        else:
+            story.append(Paragraph(clean_line, body_style))
 
     if in_section_header and meta_lines:
         story.append(create_meta_box(meta_lines, styles))
