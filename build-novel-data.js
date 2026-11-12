@@ -71,6 +71,18 @@ if (fs.existsSync(capitulosDir)) {
 
     const chapterCustomMeta = (metaConfig.chaptersMeta || []).find(m => m.id === num);
 
+    // Detección automática de banner 21:9 del capítulo en img/banners/
+    let detectedBanner = chapterCustomMeta?.bannerImage || "";
+    if (!detectedBanner) {
+      for (const ext of ['png', 'jpg', 'jpeg', 'webp']) {
+        const candidateRel = `img/banners/cap_${num}.${ext}`;
+        if (fs.existsSync(path.join(projectRoot, candidateRel))) {
+          detectedBanner = candidateRel;
+          break;
+        }
+      }
+    }
+
     const meta = {
       id: num,
       title: chapterCustomMeta?.title || chapterTitle,
@@ -78,7 +90,8 @@ if (fs.existsSync(capitulosDir)) {
       pov: chapterCustomMeta?.pov || "Protagonista",
       location: chapterCustomMeta?.location || "Ubicación Principal",
       readTime: chapterCustomMeta?.readTime || `${Math.max(1, Math.ceil(wordCount / 250))} min`,
-      povImage: chapterCustomMeta?.povImage || "img/char_protagonista.png"
+      povImage: chapterCustomMeta?.povImage || "img/char_protagonista.png",
+      bannerImage: detectedBanner
     };
 
     chapters.push({

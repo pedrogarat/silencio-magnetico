@@ -431,6 +431,31 @@ body {
     transition: max-width var(--transition-smooth);
 }
 
+/* Banner Panorámico 21:9 del Capítulo */
+.chapter-hero-banner {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 1.75rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+    background: var(--bg-card);
+    position: relative;
+}
+
+.chapter-hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chapter-hero-banner:hover img {
+    transform: scale(1.02);
+}
+
 /* Banner del Capítulo */
 .chapter-banner {
     margin-bottom: 3rem;

@@ -618,7 +618,20 @@ document.addEventListener('DOMContentLoaded', () => {
         currentChapterIndex = index;
         const chap = NOVEL_DATA.chapters[index];
 
-        // Actualizar UI del Encabezado y Viñeta
+        // Actualizar UI del Encabezado, Banner Panorámico 21:9 y Viñeta
+        const heroBannerEl = document.getElementById('chapter-hero-banner');
+        const heroBannerImg = document.getElementById('chapter-hero-banner-img');
+        if (heroBannerEl && heroBannerImg) {
+            if (chap.bannerImage) {
+                heroBannerImg.src = chap.bannerImage;
+                heroBannerImg.alt = `Ilustración panorámica: ${chap.title}`;
+                heroBannerEl.style.display = 'block';
+            } else {
+                heroBannerEl.style.display = 'none';
+                heroBannerImg.removeAttribute('src');
+            }
+        }
+
         const chapterVignetteImg = document.getElementById('chapter-vignette-img');
         if (chapterVignetteImg && chap.povImage) {
             chapterVignetteImg.src = chap.povImage;
